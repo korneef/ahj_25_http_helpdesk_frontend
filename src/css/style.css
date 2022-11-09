@@ -1,0 +1,135 @@
+body {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: #d7f3ff;
+  padding: 20px;
+
+}
+
+/* header */
+
+.header {
+  display: flex;
+  justify-content: end;
+  padding-bottom: 20px;
+}
+
+.header-button {
+  width: 300px;
+}
+
+.header-button_button {
+  background-color: inherit;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: inherit;
+}
+
+.header-button_button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* main */
+
+.task {
+  border: 1px solid #000000;
+  border-bottom: none;
+}
+
+.task:last-child {
+  border-bottom: 1px solid #000000;
+}
+
+.task__basic-information {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 10px
+}
+
+/* checkbox style */
+
+.task__label-for-checkbox {}
+
+.task__label-for-checkbox>span {
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.task__label-for-checkbox>span::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 15px;
+}
+
+.task__label-for-checkbox>span:hover::before {
+  cursor: pointer;
+}
+
+.task__form-checkbox:checked+span::before {
+  background-image: url('../img/chekmark.png');
+  background-repeat: no-repeat;
+}
+
+.task__form-checkbox {
+  position: absolute;
+  opacity: 0;
+  top: -50px;
+  left: -50px;
+}
+
+/* name style */
+
+.task__name {
+  padding: 0 20px;
+  flex-grow: 1;
+}
+
+.task__task-create-date {
+  padding: 0 20px;
+  width: 150px;
+}
+
+/* task buttons style */
+
+.task-button {
+  width: 20px;
+  padding: 0 10px;
+}
+
+.task-button__button {
+  border: 1px solid #000000;
+  border-radius: 50%;
+  position: relative;
+  background-color: inherit;
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+}
+
+.task-button__button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* description style */
+
+.task__description {
+  padding: 10px 270px 10px 60px;
+}
