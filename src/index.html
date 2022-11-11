@@ -19,91 +19,69 @@
     </header>
     <main>
       <div class="tasks-board">
-        <div class="task">
+
+        <div class="task form-task_invisible">
           <div class="task__basic-information">
             <label class="task__label-for-checkbox">
               <input type="checkbox" name="form-checkbox" class="task__form-checkbox">
               <span></span>
             </label>
-            <div class="task__name">Сделать задание</div>
-            <div class="task__task-create-date">12.11.2021 05:07</div>
+            <div class="task__name"></div>
+            <div class="task__task-create-date"></div>
             <div class="task__edit-task-button-container task-button">
-              <button class="task-button__button">✎</button>
+              <button class="task-button__button task-button__button-edit">✎</button>
             </div>
             <div class="task__edit-task-button-container task-button">
-              <button class="task-button__button">x</button>
-            </div>
-          </div>
-          <div class="task__description"><span class="task__description-text">Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Non, natus. Blanditiis maiores voluptates numquam asperiores sequi libero molestias
-              distinctio vel, voluptate et hic, mollitia, impedit voluptatem animi perspiciatis nemo dignissimos!</span>
-          </div>
-        </div>
-        <div class="task">
-          <div class="task__basic-information">
-            <label class="task__label-for-checkbox">
-              <input type="checkbox" name="form-checkbox" class="task__form-checkbox">
-              <span></span>
-            </label>
-            <div class="task__name">Сделать задание</div>
-            <div class="task__task-create-date">12.11.2021 05:07</div>
-            <div class="task__edit-task-button-container task-button">
-              <button class="task-button__button">✎</button>
-            </div>
-            <div class="task__edit-task-button-container task-button">
-              <button class="task-button__button">x</button>
+              <button class="task-button__button task-button__button-delete">x</button>
             </div>
           </div>
-          <div class="task__description"><span class="task__description-text">Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Non, natus. Blanditiis maiores voluptates numquam asperiores sequi libero molestias
-              distinctio vel, voluptate et hic, mollitia, impedit voluptatem animi perspiciatis nemo dignissimos!</span>
-          </div>
-        </div>
-        <div class="task">
-          <div class="task__basic-information">
-            <label class="task__label-for-checkbox">
-              <input type="checkbox" name="form-checkbox" class="task__form-checkbox">
-              <span></span>
-            </label>
-            <div class="task__name">Сделать задание</div>
-            <div class="task__task-create-date">12.11.2021 05:07</div>
-            <div class="task__edit-task-button-container task-button">
-              <button class="task-button__button">✎</button>
-            </div>
-            <div class="task__edit-task-button-container task-button">
-              <button class="task-button__button">x</button>
-            </div>
-          </div>
-          <div class="task__description"><span class="task__description-text">Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Non, natus. Blanditiis maiores voluptates numquam asperiores sequi libero molestias
-              distinctio vel, voluptate et hic, mollitia, impedit voluptatem animi perspiciatis nemo dignissimos!</span>
+          <div class="task__description task__description_invisible"><span class="task__description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iure fugit maiores. Nisi aliquid pariatur maiores sed, dolor vitae! Tempore delectus iusto, enim tenetur necessitatibus nulla? Incidunt aliquid similique cumque.</span>
           </div>
         </div>
 
       </div>
     </main>
   </div>
-  <div class="background-for-form-task-editor form-task-editor_visible">
-    <div class="container-for-form-task-editor">
+  <div class="background-for-form-task form-task-creator form-task_invisible">
+    <div class="container-for-form-task">
       <form action="work-with-task" class="form">
         <h2 class="work-with-task__header">Добавить тикет</h2>
         <label>
           <div class="work-with-task__input-header">Краткое описание</div>
-          <input type="text" name="name" class="work-with-task__input-task-name">
+          <input type="text" name="name" required class="work-with-task__input-task-name">
         </label>
         <label>
           <div class="work-with-task__input-header">Подробное описание</div>
-          <textarea name="description" cols="30" class="work-with-task__input-task-description"></textarea>
+          <textarea name="description" cols="30" required class="work-with-task__input-task-description"></textarea>
         </label>
         <div class="work-with-task__buttons-wrapper">
           <button type="button" class="work-with-task__button work-with-task__close-button">Отмена</button>
-          <button background-for-form-task-editor class="work-with-task__button work-with-task__submit-button">Ок</button>
+          <button class="work-with-task__button work-with-task__submit-button">Ок</button>
         </div>
       </form>
     </div>
   </div>
-  <div class="background-for-form-task-editor form-task-deletion_visible">
-    <div class="container-for-form-task-editor">
+  <div class="background-for-form-task form-task-editor form-task_invisible">
+    <div class="container-for-form-task">
+      <form action="work-with-task" class="form">
+        <h2 class="work-with-task__header">Редактировать тикет</h2>
+        <label>
+          <div class="work-with-task__input-header">Краткое описание</div>
+          <input type="text" name="name" required class="work-with-task__input-task-name">
+        </label>
+        <label>
+          <div class="work-with-task__input-header">Подробное описание</div>
+          <textarea name="description" cols="30" required class="work-with-task__input-task-description"></textarea>
+        </label>
+        <div class="work-with-task__buttons-wrapper">
+          <button type="button" class="work-with-task__button work-with-task__close-button">Отмена</button>
+          <button class="work-with-task__button work-with-task__submit-button">Ок</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="background-for-form-task form-task-deleter form-task_invisible">
+    <div class="container-for-form-task">
         <h2 class="work-with-task__header">Удалить тикет</h2>
         <span>Вы действительно хотите удалить тикет? Это действие необратимо</span>
         <div class="work-with-task__buttons-wrapper">

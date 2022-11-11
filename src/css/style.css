@@ -41,6 +41,7 @@ button {
 .header-button_button:hover {
   background-color: #000000;
   color: #ffffff;
+  cursor: pointer;
 }
 
 /* main */
@@ -140,9 +141,13 @@ button {
   padding: 10px 270px 10px 60px;
 }
 
+.task__description_invisible {
+  display: none;
+}
+
 /* form for work with task */
 
-.background-for-form-task-editor {
+.background-for-form-task {
   position: absolute;
   background-color: #00000077;
   width: 100%;
@@ -154,7 +159,7 @@ button {
   align-items: center;
 }
 
-.container-for-form-task-editor {
+.container-for-form-task {
   background-color: #ffffff;
   width: 600px;
   border: 1px solid #000000;
@@ -220,10 +225,6 @@ button {
   cursor: pointer;
 }
 
-.form-task-editor_visible {
-  display: none;
-}
-
-.form-task-deletion_visible {
+.form-task_invisible {
   display: none;
 }
